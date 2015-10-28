@@ -8,17 +8,17 @@
 
 ```html
 <script>
-(function(i, s, o, g, r, a, m){i['FluxWidgetObject']=r;i[r]=i[r]||function(){
+(function(i,s,o,g,r,a,m){i['FluxWidgetObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments);};a=s.createElement(o);m=s.getElementsByTagName(o)[0];
 a.async=1;a.src=g;a.id='FluxWidgetScript';m.parentNode.insertBefore(a,m);
-})(window,document,'script','//my.allychat.ru/widget/dist/widget.js','fab');
+})(window,document,'script','https://my.allychat.ru/widget/dist/widget.js','fab');
 
 fab('init', {});
 
 </script>
 ```
 
-Путь к виджету `//my.allychat.ru/widget/dist/widget.js` указан в качестве примера. Для каждого клиента он будет свой.
+Путь к виджету `https://my.allychat.ru/widget/dist/widget.js` указан в качестве примера. Для каждого клиента он будет свой.
  
 При инициализации виджета `fab('init', {})` передаются настройки виджета.
 Список настроек:
