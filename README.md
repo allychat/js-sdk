@@ -1,10 +1,10 @@
 # js-sdk
 
-## Подключение виджета
+## Add Widget
 
-Для подключения виджета нужно вставить небольшой кусок кода на страницу.
+To add the widget, simply paste the embedding code to the page.
 
-### Пример кода для вставки виджета
+### Example of the embedding code
 
 ```html
 <script>
@@ -18,19 +18,18 @@ fab('init', {});
 </script>
 ```
 
-Путь к виджету `https://my.allychat.ru/widget/dist/widget.js` указан в качестве примера. Для каждого клиента он будет свой.
+URL to widget `https://my.allychat.ru/widget/dist/widget.js` is specified just for example. For each instance, URL will be different.
  
-При инициализации виджета `fab('init', {})` передаются настройки виджета.
-Список настроек:
-* alias - уникальный идентификатор пользователя (по-умолчанию генерируется автоматически)
-* appId - идентификатор приложения (нужен только для разделения по разным каналам)
-* bubbleColor - цвет бабла (основной цвет виджета)
-* badgeColor - цвет наклейки на бабле, когда есть новые сообщения
-* lightTheme - режим светлой темы оформления (нужен, если цвет бабла слишком светлый)
+Settings is specified when initializing the widget `fab('init', {})`
+Available settings:
+* alias - unique client ID (by default will generate an anonymous random alias)
+* appId - application ID (need for splitting by multiple application)
+* bubbleColor - color for the widget button and the message bubbles (common widget color)
+* lightTheme - light mode of widget theme (need if light bubble color is specified)
 
-Примеры:
+Examples:
 ```javascript
 fab('init', {alias: 'ABC123', appId: 'mobile', bubbleColor: 'white', lightTheme: true});
 
-fab('init', {alias: 'FOOBAR', bubbleColor: '#33aa8f', badgeColor: '#e55100'});
+fab('init', {alias: 'FOOBAR', bubbleColor: '#33aa8f'});
 ```
